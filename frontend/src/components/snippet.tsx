@@ -19,7 +19,7 @@ export default function StatusApp() {
           setIsReady(true);
         }
       } catch (err) {
-        setError('Backend connection failed - ensure server is running');
+        setError('Backend connection Failed - Ensure server is Running.');
         console.error('Health check error:', err);
       }
     };
@@ -28,16 +28,16 @@ export default function StatusApp() {
   }, []);
 
   return (
-    <div className="mt-10 flex flex-col items-center">
+    <div className="mt-2 flex flex-col items-center">
       {isReady && (
-        <div className="text-2xl font-bold text-green-600 animate-pulse">
+        <div className="text-sm font-bold text-green-600">
           DeepSeek Ready
         </div>
       )}
       
       {error && (
-        <div className="text-red-500 text-lg">
-          {error} - Verify backend is running on port 5000
+        <div className="text-left text-red-500 text-sm">
+          {error} 
         </div>
       )}
     </div>

@@ -35,7 +35,7 @@ export default function PopOverApp() {
         <Popover key={backdrop} showArrow backdrop={backdrop} offset={10} placement="bottom">
           <PopoverTrigger>
             <Button radius="lg"
-              color="secondary"
+              color="primary"
               href="#"
               variant="solid"
               size="lg"

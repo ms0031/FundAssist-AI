@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from '@heroui/react';
 import { useTheme } from '../hooks/use-theme'; // adjust path as needed
-import {Tooltip, Button} from "@heroui/react";
+import {Tooltip} from "@heroui/react";
 
 // Reuse your MoonIcon and SunIcon components
 export const MoonIcon = (props: React.SVGProps<SVGSVGElement>) => {
@@ -52,7 +52,7 @@ const ToggleApp: React.FC = () => {
         <Switch
           isSelected={!isDark} 
           onChange={toggleTheme}
-          color="secondary"
+          color="default"
           size="lg"
           thumbIcon={({ isSelected, className }) =>
             isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />

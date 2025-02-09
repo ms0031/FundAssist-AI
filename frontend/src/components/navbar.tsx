@@ -1,36 +1,39 @@
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@heroui/react";
-import ToggleApp from '../components/toggle';
-import PopOverApp from '../components/popover';
+import ToggleApp from "../components/toggle";
+import PopOverApp from "../components/popover";
+import { Divider } from "@heroui/react";
+import DrawerApp from '../components/drawer';
 export default function NavbarApp() {
   return (
-    <div className="w-screen">
-      <Navbar isBordered height="8rem">
-        <NavbarBrand>
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo.svg"
-              alt="FundAssist-AI"
-              className="w-20 h-20 text-blue-500"
-            />
-            <p className="font-bold text-4xl">FundAssist-AI</p>
+    <div>
+    <div className="w-screen p-4 flex items-center">
+      <div className="flex items-center">
+        <div>
+          <img
+            src="/logo.svg"
+            alt="FundAssist-AI"
+            className="w-16 h-16 text-blue-500"
+          />
+        </div>
+        <div>
+          <p className="font-sourGummy font-extrabold text-4xl ">FundAssist-AI</p>
+        </div>
+        </div>
+      <div className="flex-1 flex justify-end items-center">
+        <div>
+          <PopOverApp />
           </div>
-        </NavbarBrand>
-        <NavbarContent className="flex-1 flex justify-end items-center">
-          <NavbarItem>
-            <PopOverApp />
-          </NavbarItem>
-          <NavbarItem>
-            <ToggleApp />
-          </NavbarItem>
-        </NavbarContent>
-      </Navbar>
+          
+        <div>
+          <ToggleApp />
+          </div>
+          <div>
+            <DrawerApp />
+          </div>
+          
+      </div>
+
+    </div>
+    <Divider/>
     </div>
   );
 }
